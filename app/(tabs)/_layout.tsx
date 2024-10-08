@@ -1,7 +1,7 @@
 import { Tabs } from "expo-router";
 import React from "react";
-import { View, Image } from "react-native";
-import { Ionicons, FontAwesome, Octicons } from "@expo/vector-icons";
+import { View, Image, Text } from "react-native";
+import { Ionicons, FontAwesome, Octicons, AntDesign } from "@expo/vector-icons";
 import tw from "twrnc";
 
 const TabsLayout = () => {
@@ -20,6 +20,22 @@ const TabsLayout = () => {
                   <Ionicons name="home-outline" size={size} color={color} />
                 )}
               </>
+            );
+          },
+          headerTitle: ({ children }) => {
+            return (
+              <Text style={tw`font-bold text-xl`}>
+                {children}
+              </Text>
+            );
+          },
+          headerRight: () => {
+            return (
+              <View style={tw`flex-row gap-x-6 items-center pr-4`}>
+                <AntDesign name="search1" size={20} color="blue" />
+                <AntDesign name="pluscircleo" size={20} color="blue" />
+                <Ionicons name="ellipsis-vertical" size={20} color="blue" />
+              </View>
             );
           },
         }}
