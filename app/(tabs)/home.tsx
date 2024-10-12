@@ -14,7 +14,7 @@ const Home = () => {
         <AntDesign name="ellipsis1" size={24} color="gray" />
       </View>
 
-      <View style={tw`mt-7 gap-y-7 px-4`}>
+      <View style={tw`mt-7 gap-y-6 px-4`}>
         {homeMenu.map((item) => {
           return (
             <View style={tw`flex-row gap-x-4 items-center`} key={item.title}>
@@ -42,7 +42,7 @@ const Home = () => {
           </View>
 
           <Pressable
-            style={tw`items-center justify-center shadow shadow-gray-400 h-12`}
+            style={tw`items-center justify-center border-[0.5px] border-gray-400 h-12`}
           >
             <Text style={tw`text-blue-600 font-medium`}>ADD FAVOURITES</Text>
           </Pressable>
@@ -80,7 +80,7 @@ const Home = () => {
             </Text>
           </View>
           <Pressable
-            style={tw`items-center justify-center shadow shadow-gray-400 h-12`}
+            style={tw`items-center justify-center border-[0.5px] border-gray-400 h-12`}
           >
             <Text style={tw`text-blue-600 font-medium`}>GET STARTED</Text>
           </Pressable>
