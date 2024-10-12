@@ -18,7 +18,7 @@ const Home = () => {
         {homeMenu.map((item) => {
           return (
             <View style={tw`flex-row gap-x-4 items-center`} key={item.title}>
-              <View style={tw`bg-[${item.color}] py-2 px-2 rounded-md`}>
+              <View style={tw`bg-[${item.color}] py-2 px-2 rounded`}>
                 <item.Icon name={item.iconName} size={16} color="white" />
               </View>
               <Text style={tw`text-base`}>{item.title}</Text>
@@ -44,7 +44,7 @@ const Home = () => {
           <Pressable
             style={tw`items-center justify-center border-[0.5px] border-gray-400 h-12`}
           >
-            <Text style={tw`text-blue-600 font-medium`}>ADD FAVOURITES</Text>
+            <Text style={tw`text-blue-600 font-medium rounded-md`}>ADD FAVOURITES</Text>
           </Pressable>
         </View>
       </View>
@@ -80,7 +80,7 @@ const Home = () => {
             </Text>
           </View>
           <Pressable
-            style={tw`items-center justify-center border-[0.5px] border-gray-400 h-12`}
+            style={tw`items-center justify-center border-[0.5px] border-gray-400 h-12 rounded-md`}
           >
             <Text style={tw`text-blue-600 font-medium`}>GET STARTED</Text>
           </Pressable>
