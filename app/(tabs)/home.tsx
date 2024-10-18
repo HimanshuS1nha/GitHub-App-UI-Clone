@@ -2,6 +2,7 @@ import { View, Text, ScrollView, Pressable } from "react-native";
 import React from "react";
 import tw from "twrnc";
 import { AntDesign } from "@expo/vector-icons";
+import { router } from "expo-router";
 
 import { homeMenu } from "@/constants/home-menu";
 import { shortCutIcons } from "@/constants/shortcut-icons";
@@ -17,12 +18,20 @@ const Home = () => {
       <View style={tw`mt-7 gap-y-6 px-4`}>
         {homeMenu.map((item) => {
           return (
-            <View style={tw`flex-row gap-x-4 items-center`} key={item.title}>
+            <Pressable
+              style={tw`flex-row gap-x-4 items-center`}
+              key={item.title}
+              onPress={() => {
+                if (item.url) {
+                  router.push(item.url as "/repositories");
+                }
+              }}
+            >
               <View style={tw`bg-[${item.color}] py-2 px-2 rounded`}>
                 <item.Icon name={item.iconName} size={16} color="white" />
               </View>
               <Text style={tw`text-base`}>{item.title}</Text>
-            </View>
+            </Pressable>
           );
         })}
       </View>
@@ -44,7 +53,9 @@ const Home = () => {
           <Pressable
             style={tw`items-center justify-center border-[0.5px] border-gray-400 h-12`}
           >
-            <Text style={tw`text-blue-600 font-medium rounded-md`}>ADD FAVOURITES</Text>
+            <Text style={tw`text-blue-600 font-medium rounded-md`}>
+              ADD FAVOURITES
+            </Text>
           </Pressable>
         </View>
       </View>

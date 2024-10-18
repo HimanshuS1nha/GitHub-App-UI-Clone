@@ -135,7 +135,7 @@ const Profile = () => {
               <Text style={tw`text-base`}>Repositories</Text>
             </View>
 
-            <Text style={tw`text-gray-700`}>50</Text>
+            <Text style={tw`text-gray-700`}>3</Text>
           </View>
 
           <View style={tw`flex-row justify-between items-center px-4`}>

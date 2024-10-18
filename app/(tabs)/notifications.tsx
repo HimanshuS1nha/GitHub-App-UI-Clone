@@ -12,21 +12,21 @@ const Notifications = () => {
         style={tw`bg-white px-4 pb-3 flex-row gap-x-1.5 border-b-[0.5px] border-b-gray-400`}
       >
         <View
-          style={tw`bg-gray-100 flex-row items-center px-3 py-2 rounded-full gap-x-1.5 border border-gray-300`}
+          style={tw`bg-gray-100 flex-row items-center px-2.5 py-1 rounded-full gap-x-1.5 border border-gray-300`}
         >
           <Text>Inbox</Text>
-          <AntDesign name="down" size={15} color="black" />
+          <AntDesign name="down" size={12} color="black" />
         </View>
         <View
-          style={tw`bg-gray-100 px-3 py-2 rounded-full border border-gray-300`}
+          style={tw`bg-gray-100 px-2.5 py-1 rounded-full border border-gray-300`}
         >
           <Text>Unread</Text>
         </View>
         <View
-          style={tw`bg-gray-100 flex-row items-center px-3 py-2 rounded-full gap-x-1.5 border border-gray-300`}
+          style={tw`bg-gray-100 flex-row items-center px-2.5 py-1 rounded-full gap-x-1.5 border border-gray-300`}
         >
           <Text>Repository</Text>
-          <AntDesign name="down" size={15} color="black" />
+          <AntDesign name="down" size={12} color="black" />
         </View>
       </View>
 

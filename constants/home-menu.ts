@@ -36,6 +36,7 @@ export const homeMenu = [
     Icon: AntDesign,
     iconName: "book",
     color: "#1f2937",
+    url: "/repositories",
   },
   {
     title: "Organizations",
