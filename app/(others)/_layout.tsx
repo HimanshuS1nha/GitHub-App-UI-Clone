@@ -1,7 +1,7 @@
 import { router, Stack } from "expo-router";
 import { Pressable, Text, View } from "react-native";
 import tw from "twrnc";
-import { FontAwesome6 } from "@expo/vector-icons";
+import { FontAwesome6, AntDesign, Ionicons } from "@expo/vector-icons";
 
 export default function OthersLayout() {
   return (
@@ -24,7 +24,29 @@ export default function OthersLayout() {
         }}
       />
 
-      <Stack.Screen name="repository" />
+      <Stack.Screen
+        name="repository"
+        options={{
+          title: "",
+          headerLeft: () => {
+            return (
+              <Pressable onPress={router.back}>
+                <FontAwesome6 name="arrow-left" size={20} color="black" />
+              </Pressable>
+            );
+          },
+          headerRight: () => {
+            return (
+              <View style={tw`flex-row gap-x-6 items-center`}>
+                <AntDesign name="pluscircleo" size={20} color="blue" />
+                <Ionicons name="ellipsis-vertical" size={20} color="blue" />
+              </View>
+            );
+          },
+          headerStyle: { backgroundColor: "#fafafb" },
+          headerShadowVisible: false,
+        }}
+      />
     </Stack>
   );
 }

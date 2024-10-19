@@ -24,12 +24,14 @@ const Repositories = () => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={tw`bg-white py-4 gap-y-6`}
       >
-        {repositories.map((repository) => {
+        {repositories.map((repository, i) => {
           return (
             <Pressable
               key={repository.name}
               style={tw`px-3 flex-row items-center gap-x-4`}
-              onPress={() => router.push("/repository")}
+              onPress={() =>
+                router.push({ pathname: "/repository", params: { index: i } })
+              }
             >
               <Image
                 source={require("../../assets/images/profile-pic.png")}
