@@ -18,8 +18,8 @@ const Repository = () => {
   const { index } = useLocalSearchParams() as unknown as { index: number };
   return (
     <>
-      <View style={tw`bg-[#fafafb] py-4 px-4 gap-y-4`}>
-        <View style={tw`flex-row gap-x-4 items-center`}>
+      <View style={tw`bg-[#fafafb] py-4 px-4 gap-y-3.5`}>
+        <View style={tw`flex-row gap-x-1.5 items-center`}>
           <Image
             source={require("../../assets/images/profile-pic.png")}
             style={tw`w-7 h-7 rounded-full`}

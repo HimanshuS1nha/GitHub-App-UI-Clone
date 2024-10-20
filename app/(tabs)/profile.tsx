@@ -1,4 +1,4 @@
-import { View, Text, Image, ScrollView } from "react-native";
+import { View, Text, Image, ScrollView, Pressable } from "react-native";
 import React from "react";
 import tw from "twrnc";
 import {
@@ -10,6 +10,7 @@ import {
   MaterialIcons,
   Octicons,
 } from "@expo/vector-icons";
+import { router } from "expo-router";
 
 import { repositories } from "@/constants/repositories";
 
@@ -86,11 +87,14 @@ const Profile = () => {
           horizontal
           showsHorizontalScrollIndicator={false}
         >
-          {repositories.map((repository) => {
+          {repositories.map((repository, i) => {
             return (
-              <View
+              <Pressable
                 key={repository.name}
                 style={tw`p-4 rounded border border-gray-300 mr-4 w-68 h-36 gap-y-2`}
+                onPress={() =>
+                  router.push({ pathname: "/repository", params: { index: i } })
+                }
               >
                 <View style={tw`flex-row gap-x-2`}>
                   <Image
@@ -119,7 +123,7 @@ const Profile = () => {
                     {repository.language}
                   </Text>
                 </View>
-              </View>
+              </Pressable>
             );
           })}
         </ScrollView>
@@ -127,7 +131,10 @@ const Profile = () => {
         <View style={tw`h-[0.4px] bg-gray-400 mt-4`} />
 
         <View style={tw`mt-4 gap-y-5`}>
-          <View style={tw`flex-row justify-between items-center px-4`}>
+          <Pressable
+            style={tw`flex-row justify-between items-center px-4`}
+            onPress={() => router.push("/repositories")}
+          >
             <View style={tw`flex-row gap-x-4 items-center`}>
               <View style={tw`p-2 rounded bg-[#1f2937]`}>
                 <AntDesign name="book" size={16} color="white" />
@@ -136,7 +143,7 @@ const Profile = () => {
             </View>
 
             <Text style={tw`text-gray-700`}>3</Text>
-          </View>
+          </Pressable>
 
           <View style={tw`flex-row justify-between items-center px-4`}>
             <View style={tw`flex-row gap-x-4 items-center`}>
