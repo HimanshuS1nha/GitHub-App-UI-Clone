@@ -37,7 +37,7 @@ A UI clone of the GitHub mobile application.
 
 ## Demo
 
-Live Demo - Coming Soon
+Live Demo - [Click Here](https://www.youtube.com/shorts/sd-cYlAoZxY)
 
 ## 🚀 About Me
 
